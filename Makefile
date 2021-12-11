@@ -11,9 +11,9 @@ CRDIR = createdir
 OBJDIR = build
 SOURCEDIR = ./$(SRCDIR)/$(MAINDIR)
 
-_SOURCES := $(shell find $(SOURCEDIR) -name '*.cpp')
+_SOURCES := $(shell find $(SRCDIR) -name '*.cpp')
 
-SOURCES := $(patsubst ./%.cpp, %.o, $(_SOURCES))
+SOURCES := $(patsubst %.cpp, %.o, $(_SOURCES))
 
 OBJECTS = $(addprefix $(OBJDIR)/, $(SOURCES))
 
